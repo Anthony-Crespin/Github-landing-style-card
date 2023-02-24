@@ -1,0 +1,45 @@
+body{
+    background-color: #0d1117;
+}
+
+.card{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin: 100px auto;
+    border-radius: 10px;
+    background-color: #212731;
+    overflow: hidden;
+    margin-bottom: 50px;
+    border: 0.25px solid #323b4b;
+}
+
+.home-skew {
+    transform: perspective(1000px)
+}
+
+.feature-card-mktg{
+    height: 100%;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.home-feature-card-shine {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 650px;
+    height: 650px;
+    background-color: violet;
+    filter: blur(180px);
+    border-radius: 300px;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    mix-blend-mode: soft-light;
+    will-change: transform;
+    z-index: -1 !important;
+}
+
+.feature-card-mktg:hover .home-feature-card-shine {
+    opacity: .85
+}
